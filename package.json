@@ -1,0 +1,14 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "Dockerfile generation service",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nkinc",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}
