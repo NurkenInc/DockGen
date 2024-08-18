@@ -9,18 +9,18 @@ interface FrameworkConfig {
 }
 
 const nodeBase: FrameworkConfig = {
-  baseImage: 'node:18-slim',
+  baseImage: 'node:20-slim',
   buildStage: `
-    FROM node:18 AS builder
+    FROM node:20 AS builder
     WORKDIR /app
     COPY package*.json ./
-    RUN npm install
+    RUN yarn install
     COPY . .
     RUN {{buildCommand}}
   `,
-  installCommand: 'npm install',
+  installCommand: 'yarn install',
   copyCommand: 'COPY --from=builder /app ./',
-  defaultBuildCommand: 'npm run build',
+  defaultBuildCommand: 'yarn build',
   defaultStartCommand: 'node build',
   defaultPort: '3000',
 };

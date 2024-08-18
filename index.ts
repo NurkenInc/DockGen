@@ -4,7 +4,7 @@ import { generateDockerfile } from './generator';
  * Todo: Determine what package manager to use based on the lock file for node based projects(npm, yarn, pnpm)
  */
 
-// generateDockerfile('/repositories/next');
+generateDockerfile('/repositories/next', 'yarn build', 'yarn start');
 // generateDockerfile('/repositories/nuxt');
 // generateDockerfile('/repositories/nest');
 // generateDockerfile('/repositories/vue');
